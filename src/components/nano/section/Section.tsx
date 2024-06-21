@@ -1,13 +1,12 @@
-import "./css/_section.scss";
-
 interface SectionProps {
   id?: string;
   titulo: string;
+  css?: string;
 }
 
-const Section: React.FC<SectionProps> = ({ titulo, id = " " }) => {
+const Section: React.FC<SectionProps> = ({ titulo, id = " ", css = " " }) => {
   return (
-    <div className="title-section">
+    <div className={`title-section ${css}`}>
       <a href={`#${id}`}>
         <label>{titulo}</label>
       </a>

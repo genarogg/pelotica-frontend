@@ -10,6 +10,10 @@ header {
     background-color: inherit;
     width: inherit;
 
+    backdrop-filter: blur(12px);
+    background-color: #2f2e41ab;
+    z-index: 100000;
+
     .header-ghost {
       margin-bottom: 90px;
       width: 100%;
@@ -68,9 +72,6 @@ header {
             margin-right: 15px;
 
             border-left: 1px solid #fff;
-
-            a {
-            }
           }
         }
       }

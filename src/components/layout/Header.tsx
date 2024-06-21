@@ -9,10 +9,6 @@ import {
 
 import { FaCalendarCheck } from "react-icons/fa6";
 
-import Img from "next/image";
-
-import imgLogo from "@img/isologo.png";
-
 import LogoPelotica from "../svg/LogoPelotica";
 
 interface HeaderProps {}
@@ -31,7 +27,6 @@ const Header: React.FC<HeaderProps> = () => {
       <div className="header-ghost"></div>
       <div className="header">
         <div className="logo">
-          {/* <Img src={imgLogo} alt="Logo" /> */}
           <div className="img">
             <LogoPelotica />
           </div>

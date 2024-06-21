@@ -1,0 +1,242 @@
+.container-form {
+  border: 1px solid #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 30px rgba(1, 41, 112, 0.2);
+
+  $size: 440px;
+  width: $size;
+  min-width: $size;
+  max-width: $size;
+  align-items: center;
+
+  flex-direction: column;
+  padding: 30px 40px 40px;
+
+  justify-content: center;
+  display: grid;
+
+  gap: 30px;
+  grid-template-columns: 1fr;
+}
+
+.container-input {
+  border: 1px solid #aaa;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 1fr 7fr 0.5fr;
+
+  height: 46px;
+  position: relative;
+  width: 100%;
+
+  display: flex; //nueva linea
+
+  cursor: pointer;
+
+  &.textarea {
+    height: 100%;
+    display: flex;
+
+    &.enriquecido {
+      .quill {
+        width: 100%;
+        max-width: 740px;
+        height: 100%;
+        min-height: 250px;
+      }
+
+      .ql-container {
+        border: none;
+      }
+
+      .ql-toolbar {
+        border: none;
+        border-bottom: 1px solid #aaa;
+      }
+
+      /* span.holder{
+        top: 60px;
+      } */
+    }
+  }
+
+  &,
+  * {
+    transition: 500ms ease all;
+  }
+
+  &:hover {
+    border: 1px solid $gris-oscuro;
+  }
+
+  &.focus {
+    border: 1px solid $gris-oscuro;
+
+    span.holder {
+      font-size: 14px;
+      font-weight: 600;
+      top: 0;
+    }
+  }
+
+  input {
+    background-color: transparent;
+    border: none;
+    font-size: 18px;
+    font-weight: 600;
+    height: 100%;
+    outline: none;
+    padding: 0 10px;
+    position: relative;
+    width: 90%;
+    color: $gris-oscuro;
+  }
+
+  input[type="file"] {
+    display: none;
+  }
+
+  /*  .file-label {
+    border: none;
+    color: #ccc;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  } */
+
+  select {
+    background-color: transparent;
+    border: none;
+    font-size: 18px;
+    font-weight: 600;
+    height: 100%;
+    outline: none;
+    padding: 0 10px;
+    position: relative;
+    width: 90%;
+    color: $gris-oscuro;
+  }
+
+  label {
+    @include center;
+    max-width: 46px;
+    min-width: 46px;
+    .icono {
+      @include center;
+      color: #fff;
+    }
+  }
+
+  label.file,
+  label.custom-file-upload {
+    max-width: initial;
+    min-width: initial;
+    z-index: 10000;
+    display: block;
+    width: 100%;
+    cursor: pointer;
+    color: $gris-oscuro;
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  textarea {
+    background-color: transparent;
+    border: none;
+    font-size: 18px;
+    font-weight: 600;
+
+    outline: none;
+    padding: 10px 30px;
+    position: relative;
+    width: 90%;
+    color: $gris-oscuro;
+  }
+
+  span.holder {
+    background-color: #fff;
+    color: $gris-oscuro;
+    font-size: 18px;
+    left: 40px;
+    padding: 0 10px;
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    top: 23px;
+    transform: translateY(-50%);
+    transition: 0.3s;
+
+    &.has-content {
+      font-size: 14px;
+      font-weight: 600;
+      top: 0 !important;
+    }
+  }
+
+  .view-pass {
+    @include center;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+    height: 100%;
+    position: relative;
+    width: 10%;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+
+    &:hover {
+      color: $gris-oscuro;
+    }
+  }
+}
+
+.submit-container {
+  @include center-x;
+  height: 42px;
+  position: relative;
+  width: 100%;
+
+  &,
+  * {
+    transition: 500ms ease all;
+  }
+
+  button {
+    background-color: transparent;
+    border: 1px solid #fff;
+    border-radius: 10px;
+
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+    height: 100%;
+    max-width: calc(333px / 1.5);
+    outline: none;
+    position: relative;
+    width: 100%;
+
+    &:active {
+      background-color: rgba($amarillo, 7);
+      transform: scale(0.9);
+    }
+
+    &:disabled {
+      background-color: rgba($amarillo, 3);
+    }
+
+    &:focus {
+      background-color: rgba($amarillo, 7);
+    }
+
+    &:hover {
+      background-color: rgba($amarillo, 7);
+    }
+  }
+}

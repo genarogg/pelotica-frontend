@@ -8,7 +8,7 @@ const Bienvenida: React.FC<BienvenidaProps> = () => {
       ".bienvenida-container"
     ) as HTMLImageElement;
 
-    imgBgElement.style.backgroundImage = `url(/home/backgournd.webp)`;
+    imgBgElement.style.backgroundImage = `url(/home/bg-home_resultado.webp)`;
   }, []);
 
   return (

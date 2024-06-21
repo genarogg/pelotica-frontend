@@ -19,6 +19,7 @@
       "@view/*": ["./src/components/views/*"],
       "@component/*": ["./src/components/*"],
       "@nano": ["./src/components/nano/Nano.tsx"],
+      "@form": ["./src/components/nano/form/index.tsx"],
       "@img/*": ["./src/img/*"],
       "@css": ["./src/css/style.scss"]
     }
