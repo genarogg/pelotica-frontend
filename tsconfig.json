@@ -13,7 +13,14 @@
     "jsx": "preserve",
     "incremental": true,
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+
+      "@layout": ["./src/components/layout/Layout.tsx"],
+      "@view/*": ["./src/components/views/*"],
+      "@component/*": ["./src/components/*"],
+      "@nano": ["./src/components/nano/Nano.tsx"],
+      "@img/*": ["./src/img/*"],
+      "@css": ["./src/css/style.scss"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],

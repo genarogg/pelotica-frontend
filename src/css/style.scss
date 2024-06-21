@@ -1,0 +1,8 @@
+@import "./global/normalize";
+@import "./global/global";
+@import "./global/variables";
+@import "./global/mixin";
+
+@import "../components/layout/css/layout";
+
+@import "../components/views/home/css/home";

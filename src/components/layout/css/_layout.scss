@@ -1,0 +1,24 @@
+.container-layout {
+  display: flex;
+  min-height: 100vh;
+  min-height: 100dvh;
+
+  flex-wrap: wrap;
+}
+
+header {
+  background-color: #14213d;
+  width: 100%;
+  align-self: flex-start;
+}
+
+main {
+  width: 100%;
+}
+footer {
+  align-self: flex-end;
+  width: 100%;
+  background-color: #14213d;
+}
+
+@import "./header";
