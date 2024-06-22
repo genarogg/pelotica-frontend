@@ -1,4 +1,6 @@
-import { A, Icono } from "@nano";
+import { useState } from "react";
+
+import { A, Icono, BtnHamburgues } from "@nano";
 
 import {
   MdGroups2,
@@ -22,17 +24,20 @@ const Header: React.FC<HeaderProps> = () => {
     { to: "/", icono: <MdLogin />, texto: "ingreso" },
   ];
 
+  const [isActive, setIsActive] = useState(false);
+
   return (
     <header>
       <div className="header-ghost"></div>
       <div className="header">
+        <BtnHamburgues isActive={isActive} setIsActive={setIsActive} />
         <div className="logo">
           <div className="img">
             <LogoPelotica />
           </div>
           <h2>Pelotica</h2>
         </div>
-        <nav>
+        <nav className={`${isActive ? "active" : ""}`}>
           <ul>
             {links.map((link, index) => (
               <li key={index}>
@@ -44,6 +49,13 @@ const Header: React.FC<HeaderProps> = () => {
             ))}
           </ul>
         </nav>
+        <ul className="hidden-ml">
+          <li>
+            <A to={links[4].to}>
+              <Icono icono={links[4].icono} />
+            </A>
+          </li>
+        </ul>
       </div>
     </header>
   );

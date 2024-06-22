@@ -12,8 +12,8 @@ const Home: React.FC<HomeProps> = () => {
   return (
     <Layout>
       <Bienvenida />
-      <Nosotros />
-      <Contacto />
+     {/*  <Nosotros />
+      <Contacto /> */}
     </Layout>
   );
 };

@@ -1,9 +1,10 @@
 header {
+  $sizeHeader: 90px;
   .header {
     align-items: center;
     display: grid;
     grid-template-columns: 1fr 6fr;
-    height: 90px;
+    height: $sizeHeader;
     position: fixed;
     top: 0;
     border-bottom: 1px solid #fff;
@@ -15,7 +16,7 @@ header {
     z-index: 100000;
 
     .header-ghost {
-      margin-bottom: 90px;
+      margin-bottom: $sizeHeader;
       width: 100%;
     }
 
@@ -73,6 +74,122 @@ header {
 
             border-left: 1px solid #fff;
           }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  header {
+    $sizeHeader: 70px;
+    .header {
+      height: $sizeHeader;
+
+      .header-ghost {
+        margin-bottom: $sizeHeader;
+      }
+
+      .logo {
+        .img {
+          min-width: 200px;
+
+          svg {
+            width: 145px;
+            height: 65px;
+          }
+        }
+
+        h2 {
+          left: 65px;
+          font-size: 30px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 800px) {
+  header {
+    .header {
+      .hidden-ml,
+      .btnX.btnMenu {
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  header {
+    $sizeHeader: 60px;
+    .header {
+      height: $sizeHeader;
+
+      display: grid;
+      grid-template-columns: 1fr 6fr 1fr;
+      justify-items: center;
+
+      .header-ghost {
+        margin-bottom: $sizeHeader;
+      }
+
+      .logo {
+        border: none;
+
+        .img {
+          display: none;
+        }
+
+        h2 {
+          position: initial;
+        }
+      }
+
+      nav {
+        position: fixed;
+        left: -200%;
+
+        backdrop-filter: blur(12px);
+        background-color: #2f2e41ab;
+        z-index: 100000;
+
+        top: $sizeHeader;
+
+        height: calc(100vh - $sizeHeader);
+
+        align-content: space-between;
+        display: grid;
+
+        &.active {
+          left: 0%;
+        }
+
+        ul {
+          display: grid;
+          gap: 25px;
+          margin-top: 36px;
+
+          li {
+            height: 28px;
+            width: 50vw;
+            max-width: 360px;
+            &:last-child {
+              display: none;
+            }
+            a {
+              width: 50vw;
+              max-width: 360px;
+            }
+          }
+        }
+      }
+
+      .hidden-ml {
+        font-size: 28px;
+
+        a {
+          color: #fff;
         }
       }
     }
