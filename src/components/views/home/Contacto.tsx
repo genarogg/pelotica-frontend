@@ -7,7 +7,7 @@ import { Form, Input, TextAreaEnriquecido, Submit } from "@form";
 import { FaRegFaceGrinBeam } from "react-icons/fa6";
 import { BsEnvelopeFill } from "react-icons/bs";
 
-import { MdOutlineWhatsapp, MdOutlinePhone,MdPinDrop } from "react-icons/md";
+import { MdOutlineWhatsapp, MdOutlinePhone, MdPinDrop } from "react-icons/md";
 
 import Img from "next/image";
 
@@ -69,7 +69,7 @@ const Contacto: React.FC<ContactoProps> = () => {
             </div>
           </div>
           <div className="form">
-            <Form submit={submit}>
+            <Form submit={submit} titulo="Enviar Mensaje">
               <Input
                 icono={<FaRegFaceGrinBeam />}
                 type="text"
