@@ -41,6 +41,7 @@ const Nosotros: React.FC<NosotrosProps> = () => {
                 alt="beisbolista pelotica"
                 width={200}
                 height={200}
+                layout="responsive"
               />
               <div className="text">
                 <h2>horarios</h2>
@@ -57,10 +58,11 @@ const Nosotros: React.FC<NosotrosProps> = () => {
                 alt="beisbolista pelotica"
                 width={500}
                 height={500}
+                layout="responsive"
               />
             </div>
           </div>
-          <div className="nosotros-footer">
+           <div className="nosotros-footer">
             <ul>
               {elements.map((element, index) => (
                 <li key={index}>
