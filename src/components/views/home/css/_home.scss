@@ -11,7 +11,7 @@
   flex-direction: column;
   display: flex;
 
-
+  position: relative;
 
   .text {
     color: #fff;
@@ -24,6 +24,55 @@
 
     p {
       font-size: 24px;
+    }
+  }
+
+  .redes-sociales {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+
+    * {
+      transition: 300ms ease all;
+    }
+
+    ul {
+      display: flex;
+
+      li {
+        background-color: #fff;
+
+        $size: 30px;
+        width: $size;
+        height: $size;
+
+        border-radius: 5px;
+        margin-left: 15px;
+
+        @include center-flex;
+
+        &:active {
+          transform: scale(0.9);
+        }
+
+        &:hover {
+          .facebook {
+            color: #3b5998;
+          }
+
+          .instagram {
+            color: #e4405f;
+          }
+
+          .twitter {
+            color: #1da1f2;
+          }
+        }
+
+        a {
+          color: $amarillo;
+        }
+      }
     }
   }
 }

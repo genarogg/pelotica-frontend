@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior:smooth
 }
 
 a {
@@ -14,4 +15,17 @@ li {
 
 body {
   font-family: "Nunito", sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #fba211;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #292929;
 }

@@ -7,7 +7,7 @@ import { Form, Input, TextAreaEnriquecido, Submit } from "@form";
 import { FaRegFaceGrinBeam } from "react-icons/fa6";
 import { BsEnvelopeFill } from "react-icons/bs";
 
-import { MdOutlineWhatsapp, MdOutlinePhone } from "react-icons/md";
+import { MdOutlineWhatsapp, MdOutlinePhone,MdPinDrop } from "react-icons/md";
 
 import Img from "next/image";
 
@@ -37,7 +37,7 @@ const Contacto: React.FC<ContactoProps> = () => {
     },
     {
       href: "#",
-      icono: <MdOutlinePhone />,
+      icono: <MdPinDrop />,
       texto: "Academia Pelotica, avenida X, ciudad X, Estado X",
     },
   ];

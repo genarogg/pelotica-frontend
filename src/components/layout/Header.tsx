@@ -15,10 +15,10 @@ interface HeaderProps {}
 
 const Header: React.FC<HeaderProps> = () => {
   const links = [
-    { to: "/", icono: <MdHomeFilled />, texto: "inicio" },
-    { to: "/", icono: <MdGroups2 />, texto: "nosotros" },
+    { to: "#", icono: <MdHomeFilled />, texto: "inicio" },
+    { to: "#nosotros", icono: <MdGroups2 />, texto: "nosotros" },
     { to: "/", icono: <FaCalendarCheck />, texto: "calendario" },
-    { to: "/", icono: <MdContactPhone />, texto: "contacto" },
+    { to: "#contacto", icono: <MdContactPhone />, texto: "contacto" },
     { to: "/", icono: <MdLogin />, texto: "ingreso" },
   ];
 
