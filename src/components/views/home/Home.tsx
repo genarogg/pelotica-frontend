@@ -13,7 +13,7 @@ const Home: React.FC<HomeProps> = () => {
     <Layout>
       <Bienvenida />
       <Nosotros />
-      {/* <Contacto /> */}
+      <Contacto />
     </Layout>
   );
 };

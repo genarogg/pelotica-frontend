@@ -4,8 +4,9 @@ interface ContactoProps {}
 
 import { Section, Icono } from "@nano";
 import { Form, Input, TextAreaEnriquecido, Submit } from "@form";
-import { FaRegFaceGrinBeam } from "react-icons/fa6";
+
 import { BsEnvelopeFill } from "react-icons/bs";
+import { FaRegUser } from "react-icons/fa6";
 
 import { MdOutlineWhatsapp, MdOutlinePhone, MdPinDrop } from "react-icons/md";
 
@@ -53,6 +54,7 @@ const Contacto: React.FC<ContactoProps> = () => {
               alt="contacto"
               width={500}
               height={500}
+              layout="responsive"
             />
 
             <div className="datos-contacto">
@@ -71,10 +73,10 @@ const Contacto: React.FC<ContactoProps> = () => {
           <div className="form">
             <Form submit={submit} titulo="Enviar Mensaje">
               <Input
-                icono={<FaRegFaceGrinBeam />}
+                icono={<FaRegUser />}
                 type="text"
-                name="apellido"
-                placeholder="Apellido"
+                name="nombre"
+                placeholder="nombre"
                 value={formData.nombre}
                 valueChange={(e) =>
                   setFormData({ ...formData, nombre: e.target.value })

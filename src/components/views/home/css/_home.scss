@@ -80,6 +80,7 @@
 .constiner-all-nosotros {
   @include center-x;
   .container-nosotros {
+    margin-top: 20px;
     width: 90%;
   }
   .nosotros-header {
@@ -168,6 +169,7 @@
     grid-template-columns: 1fr 1fr;
     justify-items: center;
     .container-img {
+      max-width: 500px;
       .datos-contacto {
         ul {
           display: grid;
@@ -185,7 +187,7 @@
 
             a {
               color: #fff;
-              height: 30px;
+              height: 42px;
               display: flex;
               align-items: center;
 
@@ -209,10 +211,43 @@
         }
       }
     }
+
+    .form {
+      .container-form {
+        .title {
+          color: $amarillo;
+        }
+
+        .container-input {
+          border-color: $gris-oscuro;
+
+          &.focus {
+            border-color: $amarillo;
+          }
+
+          label .icono{
+            color: $amarillo;
+          
+          }
+        }
+        .submit-container button {
+          background-color: $gris-oscuro;
+
+          &:hover {
+            background-color: $amarillo;
+          }
+          
+        }
+      }
+      .ql-toolbar.ql-snow .ql-formats:last-child{
+        display: none;
+      }
+    }
   }
 }
 
 @media screen and (max-width: 1100px) and (min-width: 850px) {
+  .constiner-all-contacto .container-contacto,
   .constiner-all-nosotros .container-nosotros {
     width: 100%;
   }
@@ -230,6 +265,7 @@
 }
 
 @media screen and (max-width: 850px) {
+  .constiner-all-contacto .container-contacto,
   .constiner-all-nosotros .container-nosotros {
     width: 100%;
   }
@@ -254,5 +290,39 @@
   .constiner-all-nosotros .nosotros-footer ul {
     grid-template-columns: 1fr;
     gap: 30px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .constiner-all-contacto .container-contacto {
+    grid-template-columns: 1fr;
+  }
+  .constiner-all-contacto {
+    margin: 0;
+  }
+
+  .form {
+    margin: 30px 0;
+  }
+
+  .constiner-all-contacto
+    .container-contacto
+    .container-img
+    .datos-contacto
+    ul {
+    margin: 0 10px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .form {
+    margin: 30px 0;
+
+    .container-form {
+      min-width: 95vw;
+      max-width: 95vw;
+
+      padding: 15px 20px 20px;
+    }
   }
 }
