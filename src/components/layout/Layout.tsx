@@ -1,5 +1,6 @@
 import Header from "./Header";
 import Footer from "./Footer";
+import { ToastContainer } from "react-toastify";
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -12,6 +13,7 @@ const Layout: React.FC<LayoutProps> = ({ children, where = " " }) => {
       <Header />
       <main>{children}</main>
       <Footer />
+      <ToastContainer />
     </div>
   );
 };

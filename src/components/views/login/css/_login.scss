@@ -1,0 +1,43 @@
+@import "../form/css/form.scss";
+
+.login-page {
+  
+  .constiner-all-contacto .container-contacto {
+    width: 100%;
+  }
+  .container-form-all {
+    $width: 410px;
+    width: $width;
+    min-width: $width;
+    max-width: $width;
+
+    .front,
+    .left {
+      $height: 435px;
+      height: $height;
+      min-height: $height;
+      max-height: $height;
+
+      $width: 410px;
+      width: $width;
+      min-width: $width;
+      max-width: $width;
+      backdrop-filter: blur(45px);
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+
+    .left {
+      $height: 330px;
+      height: $height;
+      min-height: $height;
+      max-height: $height;
+    }
+    .container-input span.holder {
+      background-color: transparent;
+    }
+  }
+
+  .constiner-all-contacto .container-contacto {
+    grid-template-columns: 1fr;
+  }
+}

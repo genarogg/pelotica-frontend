@@ -1,0 +1,9 @@
+.pagar {
+  .container-form {
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+  .constiner-all-contacto .container-contacto {
+    grid-template-columns: 1fr;
+  }
+}

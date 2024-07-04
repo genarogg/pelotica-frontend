@@ -5,4 +5,6 @@ import BtnHamburgues from "./btn/BtnHamburgues";
 
 import Section from "./section/Section";
 
-export { A, Icono, Gravatar, BtnHamburgues, Section };
+import notify from "./notify";
+
+export { A, Icono, Gravatar, BtnHamburgues, Section, notify };

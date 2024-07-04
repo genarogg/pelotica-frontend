@@ -6,10 +6,10 @@ import {
   MdGroups2,
   MdHomeFilled,
   MdContactPhone,
-  MdLogin,
 } from "react-icons/md";
 
 import { FaCalendarCheck } from "react-icons/fa6";
+import { FaCreditCard } from "react-icons/fa6";
 
 import LogoPelotica from "../svg/LogoPelotica";
 
@@ -17,11 +17,11 @@ interface HeaderProps {}
 
 const Header: React.FC<HeaderProps> = () => {
   const links = [
-    { to: "#", icono: <MdHomeFilled />, texto: "inicio" },
-    { to: "#nosotros", icono: <MdGroups2 />, texto: "nosotros" },
-    { to: "#contacto", icono: <MdContactPhone />, texto: "contacto" },
-    { to: "/", icono: <FaCalendarCheck />, texto: "calendario" },
-    { to: "/", icono: <MdLogin />, texto: "ingreso" },
+    { to: "/#", icono: <MdHomeFilled />, texto: "inicio" },
+    { to: "/#nosotros", icono: <MdGroups2 />, texto: "nosotros" },
+    { to: "/#calendario", icono: <FaCalendarCheck />, texto: "calendario" },
+    { to: "/#contacto", icono: <MdContactPhone />, texto: "contacto" },
+    { to: "/login", icono: <FaCreditCard />, texto: "Pagar" },
   ];
 
   const [isActive, setIsActive] = useState(false);

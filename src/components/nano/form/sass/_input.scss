@@ -127,7 +127,7 @@
     span.holder {
       font-size: 14px;
       font-weight: 600;
-      top: 0;
+      top: -8px !important;
     }
   }
 
@@ -210,7 +210,7 @@
   }
 
   span.holder {
-    background-color: #fff;
+    background-color: transparent;
     color: $gris-oscuro;
     font-size: 18px;
     left: 40px;
@@ -225,7 +225,7 @@
     &.has-content {
       font-size: 14px;
       font-weight: 600;
-      top: 0 !important;
+      top: -8px !important;
     }
   }
 

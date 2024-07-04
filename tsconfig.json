@@ -21,7 +21,8 @@
       "@nano": ["./src/components/nano/Nano.tsx"],
       "@form": ["./src/components/nano/form/index.tsx"],
       "@img/*": ["./src/img/*"],
-      "@css": ["./src/css/style.scss"]
+      "@css": ["./src/css/style.scss"],
+      "@env": ["./env.ts"],
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],

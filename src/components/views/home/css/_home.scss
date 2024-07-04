@@ -159,6 +159,34 @@
   }
 }
 
+.container-calendario-all {
+  @include center-x;
+  margin: 50px 0;
+
+  .container-calendario {
+    height: 500px;
+    max-width: 80%;
+    min-width: 80%;
+
+    .rbc-event,
+    .rbc-day-slot .rbc-background-event {
+      background-color: $amarillo;
+      color: $gris-oscuro;
+    }
+    .rbc-toolbar button {
+      background-color: $gris-oscuro;
+      color: $amarillo;
+      border: 1px solid $amarillo;
+      border-radius: 5px;
+
+      &:hover {
+        background-color: $amarillo;
+        color: $gris-oscuro;
+      }
+    }
+  }
+}
+
 .constiner-all-contacto {
   @include center-x;
   margin: 50px 0;
@@ -225,9 +253,8 @@
             border-color: $amarillo;
           }
 
-          label .icono{
+          label .icono {
             color: $amarillo;
-          
           }
         }
         .submit-container button {
@@ -236,10 +263,9 @@
           &:hover {
             background-color: $amarillo;
           }
-          
         }
       }
-      .ql-toolbar.ql-snow .ql-formats:last-child{
+      .ql-toolbar.ql-snow .ql-formats:last-child {
         display: none;
       }
     }
@@ -315,6 +341,14 @@
 }
 
 @media screen and (max-width: 500px) {
+  .container-calendario-all {
+    .container-calendario {
+      height: 500px;
+      max-width: 95%;
+      min-width: 95%;
+    }
+  }
+
   .form {
     margin: 30px 0;
 
