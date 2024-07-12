@@ -37,6 +37,8 @@ const GET_JUEGOS = gql`
 const Calendario: React.FC = () => {
   const { loading, error, data } = useQuery(GET_JUEGOS);
 
+  console.log(data)
+
   // Transformar los datos de GraphQL a eventos de BigCalendar
   const transformarDatosAEventos = (datos: any) => {
     return datos.juegos.data.map((juego: any) => ({
